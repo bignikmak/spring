@@ -1,14 +1,74 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ru">
 <head>
-    <title th:text="${title}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Логово батраков</title>
 </head>
 <body>
-    <div class="d-flex">
+    <header class="header">
+        <div class="sect">
+            <div class="header__inner">
+                <div class="header__text">Моя жизнь принадлежит Орде! ©</div>
 
+                <nav class="nav">
+                    <a class="nav__link active" href="/">Главная</a>
+                    <a class="nav__link" href="/blog">Бородатый блог</a>
+                    <a class="nav__link" href="/challonge">Турниры</a>
+                    <a class="nav__link" href="/about-us">О нас</a>
+                    <a class="nav__link" href="/donations">Поддержка</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro__player">
+                <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+                <div id="player"></div>
+                <script type="text/javascript">
+                    var options = {
+                        width: 400,
+                        height: 300,
+                        channel: "wanderbraun",
+                        autoplay: false,
+                    };
+                    var player = new Twitch.Player("player", options);
+                    player.setVolume(0.5);
+                </script>
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro__player">
+                <iframe width="400" height="300"
+                        src="https://www.youtube.com/embed/V8KWFHxXNm4" frameborder="0"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+                </iframe>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="intro__player">
+                <p>
+                    Lorem ipsum sec mundus ingardium leviosa en nomenas patreas etfillam amen
+                </p>
+            </div>
+        </div>
     </div>
-    <p th:text="'Hello, ' + ${title} + '!'" />
+
+    <footer class="footer">
+        <div class="sect2">
+            <div class="footer__inner">
+                <p class="footer__text">©2020 Unicorn Studio. Взаимодействуя с этой страницей, Вы принимаете условия
+                    <a href="/license" class="night">пользовательского соглашения.</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
